@@ -12,11 +12,12 @@ namespace Tashoglo3._3
                 int n = int.Parse(Console.ReadLine());
                 Console.WriteLine("Введите х:");
                 double x = double.Parse(Console.ReadLine());
-                double S = 0;              
-                {                  
-                    S += Math.Pow(x - 1, 2) + Math.Pow(x + 1, 4) /2  - Math.Pow(x + 1, 6) / 3;
+                double S = 0;
+                for (int i = 1; i <= n; i++)
+                {
+                    S += Math.Pow(x - 1, 2) + Math.Pow(x + 1, 4) / 2 - Math.Pow(x + 1, 6) / 3;
                 }
-                Console.WriteLine("S={0:F2}",S);
+                Console.WriteLine("S={0:F2}", S);
             }
             catch (Exception ex)
             {
@@ -25,5 +26,3 @@ namespace Tashoglo3._3
         }
     }
 }
-
-
